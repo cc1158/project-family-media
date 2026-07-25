@@ -1,0 +1,12 @@
+.DS_Store
+/family-media-server
+/bin/
+/dist/
+/data/
+/tmp/
+/sample-media/library/*
+/sample-media/videos/*
+/sample-media/photos/*
+!/sample-media/library/.gitkeep
+!/sample-media/videos/.gitkeep
+!/sample-media/photos/.gitkeep

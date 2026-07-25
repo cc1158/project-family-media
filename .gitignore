@@ -1,0 +1,50 @@
+# macOS
+.DS_Store
+
+# Xcode / SwiftPM
+.build/
+.swiftpm/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.p12
+*.mobileprovision
+*.cer
+*.provisionprofile
+FamilyMediaClient/LocalSigning.xcconfig
+
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+
+# Go build outputs and caches
+bin/
+dist/
+
+# Local runtime data
+data/
+tmp/
+
+# FamilyMediaClient generated build data
+FamilyMediaClient/.build/
+FamilyMediaClient/**/.DS_Store
+
+# family-media-server local outputs
+family-media-server/bin/
+family-media-server/dist/
+family-media-server/data/
+family-media-server/tmp/
+family-media-server/*.tar
+family-media-server/*.tar.sha256
+family-media-server/configs/config.nas.yaml
+
+# Sample media content; keep placeholder files
+family-media-server/sample-media/library/*
+family-media-server/sample-media/videos/*
+family-media-server/sample-media/photos/*
+!family-media-server/sample-media/library/.gitkeep
+!family-media-server/sample-media/videos/.gitkeep
+!family-media-server/sample-media/photos/.gitkeep

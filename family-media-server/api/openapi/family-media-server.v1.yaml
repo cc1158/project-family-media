@@ -1,0 +1,160 @@
+openapi: 3.0.3
+info:
+  title: family-media-server API
+  version: 1.0.0
+paths:
+  /healthz:
+    get:
+      summary: Health check
+      responses:
+        "200":
+          description: Server health and runtime diagnostics
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /api/v1/videos:
+    get:
+      summary: List videos
+      parameters:
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Cursor"
+        - $ref: "#/components/parameters/Sort"
+        - $ref: "#/components/parameters/Group"
+      responses:
+        "200":
+          description: Video list
+        "400":
+          description: Invalid cursor or sort mode
+  /api/v1/media:
+    get:
+      summary: List mixed media
+      parameters:
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Cursor"
+        - $ref: "#/components/parameters/Sort"
+        - $ref: "#/components/parameters/Group"
+      responses:
+        "200":
+          description: Mixed video and photo list
+        "400":
+          description: Invalid cursor or sort mode
+  /api/v1/photos:
+    get:
+      summary: List photos
+      parameters:
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Cursor"
+        - $ref: "#/components/parameters/Sort"
+        - $ref: "#/components/parameters/Group"
+      responses:
+        "200":
+          description: Photo list
+        "400":
+          description: Invalid cursor or sort mode
+  /api/v1/admin/scan:
+    post:
+      summary: Trigger media scan and thumbnail generation
+      responses:
+        "202":
+          description: Scan job accepted
+  /api/v1/admin/scan/status:
+    get:
+      summary: Get latest scan job status
+      responses:
+        "200":
+          description: Scan job status
+  /api/v1/admin/media/{id}/thumbnail/regenerate:
+    post:
+      summary: Regenerate one media thumbnail
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Thumbnail regenerated
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      required:
+        - status
+        - checks
+      properties:
+        status:
+          type: string
+          enum:
+            - ok
+            - degraded
+        checks:
+          type: object
+          additionalProperties:
+            $ref: "#/components/schemas/HealthCheck"
+        scan:
+          $ref: "#/components/schemas/HealthScanSummary"
+    HealthCheck:
+      type: object
+      required:
+        - status
+        - message
+      properties:
+        status:
+          type: string
+          enum:
+            - ok
+            - warning
+            - error
+        message:
+          type: string
+    HealthScanSummary:
+      type: object
+      properties:
+        status:
+          type: string
+        jobId:
+          type: string
+        finishedAt:
+          type: string
+          format: date-time
+        error:
+          type: string
+        thumbnailError:
+          type: string
+  parameters:
+    Limit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        default: 50
+        maximum: 100
+    Cursor:
+      name: cursor
+      in: query
+      required: false
+      schema:
+        type: string
+    Sort:
+      name: sort
+      in: query
+      required: false
+      schema:
+        type: string
+        default: captured_desc
+        enum:
+          - captured_desc
+          - modified_desc
+          - indexed_desc
+          - name_asc
+    Group:
+      name: group
+      in: query
+      required: false
+      schema:
+        type: string
+        enum:
+          - month

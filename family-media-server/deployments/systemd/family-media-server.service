@@ -1,0 +1,17 @@
+[Unit]
+Description=Family Media Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=family-media
+Group=family-media
+WorkingDirectory=/opt/family-media-server
+ExecStart=/opt/family-media-server/family-media-server -config /etc/family-media-server/config.yaml
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+

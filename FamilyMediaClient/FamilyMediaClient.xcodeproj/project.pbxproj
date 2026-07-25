@@ -1,0 +1,1399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0276E71AC2AF557D972EE9BE /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525808C7109536764265BEAB /* AppDependencies.swift */; };
+		02DFDF324DCA8CBFB92EE498 /* StagedRemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E5093C9037602E5ACEABF /* StagedRemoteImage.swift */; };
+		02F4343D02A472F166251354 /* PhotoRemoteControlCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8296E3253325C0E77AEC3E /* PhotoRemoteControlCaptureView.swift */; };
+		040793A871F2CB7F7BC3E907 /* NetworkRecoveryObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED115A3DB521741FE990D2E /* NetworkRecoveryObserver.swift */; };
+		04812BD073991EF78E6AED60 /* MediaImageLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A827CBBA9ACA102FD576A /* MediaImageLoadingIndicator.swift */; };
+		071028DA57716059E08C09A2 /* ZoomablePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA81933AFCF2D65D22894 /* ZoomablePhotoView.swift */; };
+		0D1D2910C33C79E94AB930B0 /* PlaybackIdleTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E5D843833CA2DE94D08918 /* PlaybackIdleTimerController.swift */; };
+		0D8982B4D6EEAF2F369DB3AE /* MediaImageDownloadProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF1BACFC3B2C40A52CB193 /* MediaImageDownloadProgress.swift */; };
+		102CEB99E8277BCA178A66F3 /* NetworkRecoveryObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADD3B9F820D2E98482233F /* NetworkRecoveryObserverTests.swift */; };
+		122807EA1368FD93934D2D59 /* MediaImageProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987DD81BE68FC80CE790D3A0 /* MediaImageProgressTests.swift */; };
+		146412348B468E6918F28308 /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868F94E12832CF5ECA28F30A /* SettingsSection.swift */; };
+		14D337F27E8FB4BAAAA8722A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8900EA8F8BA392B56CE192FE /* HomeView.swift */; };
+		174461C4069A05181D5B7C99 /* ImageMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D346151B5916C7677E1604D /* ImageMemoryCache.swift */; };
+		1772CC65A8D35E6D3E5283B5 /* ViewerChromeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291CB28F81D6C36CB409A3AF /* ViewerChromeController.swift */; };
+		178966D329DD1796729FA64A /* HomeEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19265C31ABF062769E2BB104 /* HomeEntryView.swift */; };
+		1B99A06B5956758DD3E5CFC4 /* ImageMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D346151B5916C7677E1604D /* ImageMemoryCache.swift */; };
+		1C2385F749DC65A6186D820C /* MediaViewerContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4886B18B5933C3EC6C3115 /* MediaViewerContent.swift */; };
+		1C4A59B26EBED7FA90E65C1C /* StagedRemoteImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E23971F0DFE2B43C6D700B9 /* StagedRemoteImageLoaderTests.swift */; };
+		1C582F0BA7669B4AD6C74A90 /* MediaSourcePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A66B46D293421AAC7CB9315 /* MediaSourcePresentation.swift */; };
+		1F95E1DB6D5DE0E40B288876 /* ContentUnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA10F738FDB32715D51DD94 /* ContentUnavailableView.swift */; };
+		1FD2B23654FE8EB27B736BE6 /* SystemMediaPlaybackEventObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F45534CBBBB7AF70BC1C67D /* SystemMediaPlaybackEventObserverTests.swift */; };
+		203C1D3E762471E812DF5E14 /* RootNavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0828938194C00EFA068BB92A /* RootNavigationState.swift */; };
+		21D56A0CDE6A19AAB18F5C22 /* RootPresentationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF69555FEB107F7F74AF9987 /* RootPresentationPolicy.swift */; };
+		27042711EB4E1B3F0B52EDEF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79745C5973847CFB3093D288 /* SettingsView.swift */; };
+		2AF13E8205A0452CAB4DB6C8 /* ViewerPagingGestureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2CE0674B13BA09B3C0F58E /* ViewerPagingGestureTests.swift */; };
+		2BEE2B9CB4C38857585979C1 /* DemoArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC15D79C5D61A4FF518485 /* DemoArtworkView.swift */; };
+		2E0D116B57E460D927906129 /* ViewTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C92C8066ECACF8C7CA3E6B /* ViewTaskController.swift */; };
+		30AC6CFB866D68A02D137D1B /* FamilyMediaTVTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7414BDDAAF1F29A309217 /* FamilyMediaTVTheme.swift */; };
+		3136F2766BBCDE8E301AE889 /* MediaSourcePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A66B46D293421AAC7CB9315 /* MediaSourcePresentation.swift */; };
+		32293488EFA0FB7E0C876EEC /* CachedRemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFA0AD9A1E77FC186543426 /* CachedRemoteImage.swift */; };
+		33990627307E0A17EFF2F7AB /* PlayerSurfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426448020C4ACE06D1D89D /* PlayerSurfaceView.swift */; };
+		34DC1644E63532ECA3E1A697 /* DemoMediaCatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404CCD1BDE32DB5FC70D681E /* DemoMediaCatalogService.swift */; };
+		35570CBA045E8C443355C921 /* AppMessage+TVStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E3C225920BBA90B01177DB /* AppMessage+TVStyle.swift */; };
+		36CD601DEECAEF4B70C4F3CD /* FamilyMediaiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA87EA36065672CF44EB9B /* FamilyMediaiOSApp.swift */; };
+		3AF1C6391FF6F7FACEF2B9A2 /* SettingsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F43CE3D70002E64E38B02D /* SettingsDetails.swift */; };
+		3C6A2D0D88DAE996F6A51DF5 /* MediaBrowseSessionControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F40AFB7F4730DB1076D6C4B /* MediaBrowseSessionControllerTests.swift */; };
+		3E01B27EFFC4CDFBC7E66EC3 /* MediaImagePipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D7F5259F15A7BB6AAF21C /* MediaImagePipeline.swift */; };
+		4179CACB343AFCC46D4976FE /* StagedRemoteImagePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602A27868AC6D392DC9A757C /* StagedRemoteImagePhase.swift */; };
+		4360D84CE67279ADFBAB4F4F /* ViewTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C92C8066ECACF8C7CA3E6B /* ViewTaskController.swift */; };
+		43A9B66B72D2807B7250E07C /* ViewerChromeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291CB28F81D6C36CB409A3AF /* ViewerChromeController.swift */; };
+		46452DE13482EBA824684D32 /* CachedRemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFA0AD9A1E77FC186543426 /* CachedRemoteImage.swift */; };
+		4778FD6C85D620BC73484C9F /* MediaInformationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BB3957604A8BDEC0351573 /* MediaInformationDetailView.swift */; };
+		4B103A524FCB4CC5FE7D5F53 /* ViewerChromePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073179CFAA1F6779C0F66133 /* ViewerChromePolicy.swift */; };
+		4EB2A8FF814D5128C88A11F6 /* FamilyMediaiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7BB17C3E7833D56752F18 /* FamilyMediaiOSUITests.swift */; };
+		50CE0831CB2EBFE10B1DCDA2 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70499E684038C15FC5F208 /* EmptyStateView.swift */; };
+		51AC7B5BDA19F45566C05E31 /* MediaImagePipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615D7F5259F15A7BB6AAF21C /* MediaImagePipeline.swift */; };
+		5324EE3965FF9D423A3F7732 /* MediaInformationField+AppleUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D63EB1B5E15ABD040AA4B11 /* MediaInformationField+AppleUI.swift */; };
+		5678F9DB0E788FCF222FB733 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 0EB6333CF8F5B2C804AA81B4 /* PrivacyInfo.xcprivacy */; };
+		56AE0DD53EACB38D6AD58339 /* ViewerNavigationGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CB1F736B86CED14A901EF3 /* ViewerNavigationGesture.swift */; };
+		594A8B51B647E08F71FCCB7D /* FamilyMediaTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D406FA422B150850C026AE /* FamilyMediaTVUITests.swift */; };
+		5C6535913D80C93CEE3F3EC6 /* FamilyMediaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835CE6D17A1D55AA9F3212B /* FamilyMediaTheme.swift */; };
+		5F5DEE6C5A47056020A6ACDA /* MediaThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B28F53632C326DC5AEF0A47 /* MediaThumbnailView.swift */; };
+		5F7F8919E081C1662085A83A /* MediaInformationField+AppleUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D63EB1B5E15ABD040AA4B11 /* MediaInformationField+AppleUI.swift */; };
+		609528DD5D7167DCAA6D52F3 /* ViewerChromePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073179CFAA1F6779C0F66133 /* ViewerChromePolicy.swift */; };
+		63D2F9EA723308CEB4F5A36E /* MediaGridMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EE122E4CC9422DBAA104EB /* MediaGridMetrics.swift */; };
+		6689377E3EC9EE2B5C118223 /* FamilyMediaCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7BC698665115CC4C66DA760C /* FamilyMediaCore */; };
+		672138735BA640D9CECD80A0 /* MediaThumbnailPreheater.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70841D4459DC7B2B8E0FE5 /* MediaThumbnailPreheater.swift */; };
+		69873E6319E5840EDA8280A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D582EEF27DAC8E01DB9B1F0E /* Assets.xcassets */; };
+		69C65C3DD0D698C27899B5D1 /* PlaybackIdleTimerControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4507CB1BE6171F7EE32E038 /* PlaybackIdleTimerControllerTests.swift */; };
+		6A4E3379E71F7E043BBEF237 /* DemoArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC15D79C5D61A4FF518485 /* DemoArtworkView.swift */; };
+		6B41027E191BA8467240488A /* StagedRemoteImagePhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602A27868AC6D392DC9A757C /* StagedRemoteImagePhase.swift */; };
+		6C685B2FA008ACE2CC97A4A6 /* MediaGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36357F080A6BA98A2D357FAB /* MediaGridView.swift */; };
+		71C46169B85957593217C40D /* RootNavigationStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD30E45A852014533EFF020C /* RootNavigationStateTests.swift */; };
+		71EA5B8908E3A206D681A83C /* SettingsSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EFC3B768947D2677E2B484 /* SettingsSections.swift */; };
+		7425BF81BE7339A05350B2D9 /* MediaViewerControlsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA63488A166147F095148F60 /* MediaViewerControlsBar.swift */; };
+		7673065F19191A86DB383B6F /* MediaSourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4987BB2222C167CC3992B87 /* MediaSourcesView.swift */; };
+		77BED894AFBCC316C14FA2D1 /* NetworkRecoveryObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED115A3DB521741FE990D2E /* NetworkRecoveryObserver.swift */; };
+		784B3F09433FE24D26D73837 /* MediaViewerControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F9184111C4E92C76E866B /* MediaViewerControls.swift */; };
+		7F60600C20BDE904BE519AF4 /* MediaViewerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C70C17A657883B2AA2DD16 /* MediaViewerScreen.swift */; };
+		808DA416022D7C5AA3BA47C0 /* PhotoViewerContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF7C9E7455C11AFABCD249 /* PhotoViewerContent.swift */; };
+		830AC0121A8BC55236FE8AB6 /* AppMessage+iOSStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F8CCE5B7D2BCDA257FA121 /* AppMessage+iOSStyle.swift */; };
+		839AA514DDF9D82CCEDE9389 /* TimelineLibraryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88F3F9C342B26B83839F32 /* TimelineLibraryContentView.swift */; };
+		840F5AB9384D65550B59B97D /* MediaThumbnailPreheater.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC70841D4459DC7B2B8E0FE5 /* MediaThumbnailPreheater.swift */; };
+		84650DCB124B547D60D75F92 /* MediaViewerInteractionSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FED5A66F2F82D40AE6A9D7 /* MediaViewerInteractionSurface.swift */; };
+		84E30E5496E060948B409751 /* PlaybackIdleTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E5D843833CA2DE94D08918 /* PlaybackIdleTimerController.swift */; };
+		8841EFCE5FB7E1928BAC376B /* StagedRemoteImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C0F1CD8A07572C38794EC /* StagedRemoteImageLoader.swift */; };
+		88BA5006253D7D692B69BB5D /* MediaViewerPanels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3ABE59AE1C3969D7F75D24 /* MediaViewerPanels.swift */; };
+		89A9CC87159C612192131019 /* TVWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A31E7A0F39984068F82C13 /* TVWelcomeView.swift */; };
+		8FFC4A732A8B43BE6182717F /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50890BE48721B26146E1D908 /* RootTabView.swift */; };
+		92115844F72AEC75B5A6A542 /* FamilyMediaCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BD85E66547848E667F0F8D /* FamilyMediaCategoriesView.swift */; };
+		93D17FB3B939430FCFFC31D3 /* MediaThumbnailPreheaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C6DC07A903CBFAD3BFC0B /* MediaThumbnailPreheaterTests.swift */; };
+		9B1FC4B4EC24722A6C95A9D4 /* MediaImageDownloadProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF1BACFC3B2C40A52CB193 /* MediaImageDownloadProgress.swift */; };
+		9C42F17A0B6111160AE0F375 /* FamilyMediaAdaptiveLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5044ADD9EC6757B0DBCF4A01 /* FamilyMediaAdaptiveLayout.swift */; };
+		9C4DBF215D29ABE63649B194 /* SettingsComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA38255356F312D88F4E9F /* SettingsComponents.swift */; };
+		9F0A1B6B33C23A8FAD3E0BC5 /* MediaImagePipelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1FEF70C265C80F03D1C98 /* MediaImagePipelineTests.swift */; };
+		A1BCA608D43BD7DB610035B4 /* TVClientDiagnosticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90B1CD8A23CD0F9E77AD86A /* TVClientDiagnosticsView.swift */; };
+		A34F55790BFA08F02376A0F8 /* TVTimelineContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7438772E8E35606DEF5DFFE2 /* TVTimelineContentView.swift */; };
+		A5DAF5E6C3393CE1B8554302 /* KeychainJellyfinSessionStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D752C8780BB12AD9CD730D /* KeychainJellyfinSessionStoreTests.swift */; };
+		A681FEA3DFB3A02E45244D54 /* DemoMediaCatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404CCD1BDE32DB5FC70D681E /* DemoMediaCatalogService.swift */; };
+		AA4CF98130D1583B15844E6C /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525808C7109536764265BEAB /* AppDependencies.swift */; };
+		AC108837C9029ED64A823428 /* MediaViewerOptionsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889A1166AA6E3CB02CFEB019 /* MediaViewerOptionsSheet.swift */; };
+		AC18FA6F51FE9C682ED53EE0 /* ClientDiagnosticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1A347B5ACFDA36EE88A75C /* ClientDiagnosticsView.swift */; };
+		AC30BDFD47BF722DE6620CCB /* PhotoLoadStateReporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D6961406259B544CFA346 /* PhotoLoadStateReporting.swift */; };
+		ACAF18FD3F68867FB45D85C8 /* ViewerDismissGestureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2281D1C95A1F385C780BF24 /* ViewerDismissGestureTests.swift */; };
+		AD4C30E09011F57D1F3A7AAF /* PhoneRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073B1DD6C9F35B3E40F2C039 /* PhoneRootView.swift */; };
+		B050BA17161E2A3809642205 /* MediaBrowseSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A59CC736586DDD09F09F783 /* MediaBrowseSessionController.swift */; };
+		B06EC4DCAA15189FAD3B6DA1 /* FamilyMediaTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6563364ECA8F6A82EAC7119C /* FamilyMediaTVApp.swift */; };
+		B2C291C15D6A59AFCFE13B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7072BF8323CD337176F677B4 /* Assets.xcassets */; };
+		B72E82716246F8B93E72F2E0 /* ViewerPagingGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE5CD0DFD66B2D2985C9CA /* ViewerPagingGesture.swift */; };
+		BB83C4AC1D697F4C01E5B9B3 /* FamilyMediaCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2544F45ABCCCAAFC93B3302A /* FamilyMediaCore */; };
+		BCC5A4E228065F507C2F014B /* ViewerChromeControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F09D7400D96338883AB27 /* ViewerChromeControllerTests.swift */; };
+		C0722F76588EC92779370AD0 /* ViewerChromePolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3A0987E804DFF8DDE4BDB2 /* ViewerChromePolicyTests.swift */; };
+		C41C6E35858E5745992DD1F9 /* MediaLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5ED819BE2473A3216E7B39 /* MediaLibraryView.swift */; };
+		C62B04BCE6EB8973018A6CF9 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD19EB135000FBBEA4D4F16 /* WelcomeView.swift */; };
+		C83A14BF753CFE22D5EFCADE /* MediaViewerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E42CF6F1C423CC617E15A5 /* MediaViewerScreen.swift */; };
+		CA526B77AEE84B151FEE6DCD /* MediaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099BF4A87326135C31F8FB8D /* MediaCardView.swift */; };
+		CCB0C2D934AEEB07703AC827 /* PlayerSurfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426448020C4ACE06D1D89D /* PlayerSurfaceView.swift */; };
+		CD0A7988478C29E493D2D5FC /* FamilyMediaAdaptiveLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B70E5529B94FFED56C32CE1 /* FamilyMediaAdaptiveLayoutTests.swift */; };
+		CDA26791E8E56E232C283EC9 /* StagedRemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E5093C9037602E5ACEABF /* StagedRemoteImage.swift */; };
+		D230BB750E0C84DCCC997B9C /* ViewTaskControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0429B10C99FDF972779F3 /* ViewTaskControllerTests.swift */; };
+		D95B76E12D5F69B2C0A8C5DC /* PlayerSurfaceViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F09218BB38DC2125D5DCF7 /* PlayerSurfaceViewTests.swift */; };
+		E2539F1209615040B37EB8FE /* ScanStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B38114C381F11572C990E4 /* ScanStatusView.swift */; };
+		E381083A006F255BF66284B7 /* MediaImageLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A827CBBA9ACA102FD576A /* MediaImageLoadingIndicator.swift */; };
+		E48861022E605C1AB9A59395 /* MediaThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EE2982AF8D2E7F909BA142 /* MediaThumbnailView.swift */; };
+		E555EFE32067F7ABCB78DC23 /* MediaBrowseSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A59CC736586DDD09F09F783 /* MediaBrowseSessionController.swift */; };
+		E77FE719ECD53576E77BCA9F /* StagedRemoteImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C0F1CD8A07572C38794EC /* StagedRemoteImageLoader.swift */; };
+		E8F3B3173B44E0D386565221 /* MediaViewerStatusOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9781D6ED684BF63CE77F6546 /* MediaViewerStatusOverlay.swift */; };
+		E9130AB55ABACE306E13DF1E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD236DFA298A201877F9638 /* SettingsView.swift */; };
+		F0A0E5E0546C93EF9853C275 /* IPadRootSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4683D26A81261ECD040AA32F /* IPadRootSplitView.swift */; };
+		F18C1EC82879D14716D108AD /* MediaArtworkMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2D95A0E19C9AA3C486B653 /* MediaArtworkMetrics.swift */; };
+		F33C63786DE4F9489A5679F8 /* ViewerAdjacentPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D807120BA487D19520D771 /* ViewerAdjacentPreview.swift */; };
+		F33EED9271666963719BA6FF /* MediaTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343F775655D30696F996FA93 /* MediaTileView.swift */; };
+		F3F93F762BBE25B5DCDE8CB5 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 0EB6333CF8F5B2C804AA81B4 /* PrivacyInfo.xcprivacy */; };
+		F641EA9CD7392A1AD24E0BF3 /* ViewerDismissGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EC3CE73445DE9CD2EB9419 /* ViewerDismissGesture.swift */; };
+		F6FE5B12E5C4972B16D4123E /* NumericSettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802839E09FD8D1B577A1326 /* NumericSettingRow.swift */; };
+		FBC115C854ECF42C700612E4 /* PhotoZoomScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E339F29085C55B09C03E66E /* PhotoZoomScrollViewTests.swift */; };
+		FC40F9E9749E2422256D7B6F /* TVSystemVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3B7689F52C2C8E15ADF335 /* TVSystemVideoPlayer.swift */; };
+		FE28C450E79C55AEAAC1DC11 /* PhotoLoadStateReporting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D6961406259B544CFA346 /* PhotoLoadStateReporting.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0EABD2597D1A6E35C6CA4A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 482600BC838BACF7601E0BCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F10CE994C5B25A349547BED8;
+			remoteInfo = FamilyMediaiOS;
+		};
+		D75A45C8D677450E8E3C0DDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 482600BC838BACF7601E0BCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F10CE994C5B25A349547BED8;
+			remoteInfo = FamilyMediaiOS;
+		};
+		FEED3B340EF874D30B30D2A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 482600BC838BACF7601E0BCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F12159FBD24317A1413FD9B4;
+			remoteInfo = FamilyMediaTV;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		023F9184111C4E92C76E866B /* MediaViewerControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewerControls.swift; sourceTree = "<group>"; };
+		073179CFAA1F6779C0F66133 /* ViewerChromePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerChromePolicy.swift; sourceTree = "<group>"; };
+		073B1DD6C9F35B3E40F2C039 /* PhoneRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRootView.swift; sourceTree = "<group>"; };
+		0828938194C00EFA068BB92A /* RootNavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationState.swift; sourceTree = "<group>"; };
+		099BF4A87326135C31F8FB8D /* MediaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCardView.swift; sourceTree = "<group>"; };
+		0DD19EB135000FBBEA4D4F16 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		0E8E5093C9037602E5ACEABF /* StagedRemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagedRemoteImage.swift; sourceTree = "<group>"; };
+		0EB6333CF8F5B2C804AA81B4 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		0ED115A3DB521741FE990D2E /* NetworkRecoveryObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRecoveryObserver.swift; sourceTree = "<group>"; };
+		14CB1F736B86CED14A901EF3 /* ViewerNavigationGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerNavigationGesture.swift; sourceTree = "<group>"; };
+		17F09218BB38DC2125D5DCF7 /* PlayerSurfaceViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSurfaceViewTests.swift; sourceTree = "<group>"; };
+		18ADD3B9F820D2E98482233F /* NetworkRecoveryObserverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRecoveryObserverTests.swift; sourceTree = "<group>"; };
+		19265C31ABF062769E2BB104 /* HomeEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntryView.swift; sourceTree = "<group>"; };
+		19A31E7A0F39984068F82C13 /* TVWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVWelcomeView.swift; sourceTree = "<group>"; };
+		1B70E5529B94FFED56C32CE1 /* FamilyMediaAdaptiveLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMediaAdaptiveLayoutTests.swift; sourceTree = "<group>"; };
+		1F45534CBBBB7AF70BC1C67D /* SystemMediaPlaybackEventObserverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMediaPlaybackEventObserverTests.swift; sourceTree = "<group>"; };
+		2835CE6D17A1D55AA9F3212B /* FamilyMediaTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMediaTheme.swift; sourceTree = "<group>"; };
+		291CB28F81D6C36CB409A3AF /* ViewerChromeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerChromeController.swift; sourceTree = "<group>"; };
+		29D752C8780BB12AD9CD730D /* KeychainJellyfinSessionStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainJellyfinSessionStoreTests.swift; sourceTree = "<group>"; };
+		29E5D843833CA2DE94D08918 /* PlaybackIdleTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackIdleTimerController.swift; sourceTree = "<group>"; };
+		2B28F53632C326DC5AEF0A47 /* MediaThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaThumbnailView.swift; sourceTree = "<group>"; };
+		2C5ED02721A0FE72FDD42E90 /* FamilyMediaiOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FamilyMediaiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D63EB1B5E15ABD040AA4B11 /* MediaInformationField+AppleUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediaInformationField+AppleUI.swift"; sourceTree = "<group>"; };
+		2E339F29085C55B09C03E66E /* PhotoZoomScrollViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoZoomScrollViewTests.swift; sourceTree = "<group>"; };
+		33EE2982AF8D2E7F909BA142 /* MediaThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaThumbnailView.swift; sourceTree = "<group>"; };
+		343F775655D30696F996FA93 /* MediaTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTileView.swift; sourceTree = "<group>"; };
+		36357F080A6BA98A2D357FAB /* MediaGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGridView.swift; sourceTree = "<group>"; };
+		366C0F1CD8A07572C38794EC /* StagedRemoteImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagedRemoteImageLoader.swift; sourceTree = "<group>"; };
+		373C2E2F74F9052638FDE65E /* FamilyMediaTVUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FamilyMediaTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C2D95A0E19C9AA3C486B653 /* MediaArtworkMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaArtworkMetrics.swift; sourceTree = "<group>"; };
+		3C8296E3253325C0E77AEC3E /* PhotoRemoteControlCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRemoteControlCaptureView.swift; sourceTree = "<group>"; };
+		404CCD1BDE32DB5FC70D681E /* DemoMediaCatalogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoMediaCatalogService.swift; sourceTree = "<group>"; };
+		43EFC3B768947D2677E2B484 /* SettingsSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSections.swift; sourceTree = "<group>"; };
+		4683D26A81261ECD040AA32F /* IPadRootSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPadRootSplitView.swift; sourceTree = "<group>"; };
+		48E3C225920BBA90B01177DB /* AppMessage+TVStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppMessage+TVStyle.swift"; sourceTree = "<group>"; };
+		4C3ABE59AE1C3969D7F75D24 /* MediaViewerPanels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewerPanels.swift; sourceTree = "<group>"; };
+		4C4886B18B5933C3EC6C3115 /* MediaViewerContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewerContent.swift; sourceTree = "<group>"; };
+		4D346151B5916C7677E1604D /* ImageMemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMemoryCache.swift; sourceTree = "<group>"; };
+		5044ADD9EC6757B0DBCF4A01 /* FamilyMediaAdaptiveLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMediaAdaptiveLayout.swift; sourceTree = "<group>"; };
+		50890BE48721B26146E1D908 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		525808C7109536764265BEAB /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		5CAE5CD0DFD66B2D2985C9CA /* ViewerPagingGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerPagingGesture.swift; sourceTree = "<group>"; };
+		5CE21EFFC8D0526BE5B028B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		602A27868AC6D392DC9A757C /* StagedRemoteImagePhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagedRemoteImagePhase.swift; sourceTree = "<group>"; };
+		60EC3CE73445DE9CD2EB9419 /* ViewerDismissGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerDismissGesture.swift; sourceTree = "<group>"; };
+		615D7F5259F15A7BB6AAF21C /* MediaImagePipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaImagePipeline.swift; sourceTree = "<group>"; };
+		61BD85E66547848E667F0F8D /* FamilyMediaCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMediaCategoriesView.swift; sourceTree = "<group>"; };
+		62D6BABE0FBDB4DF421C8A20 /* FamilyMediaTV.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FamilyMediaTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6563364ECA8F6A82EAC7119C /* FamilyMediaTVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMediaTVApp.swift; sourceTree = "<group>"; };
+		66DF1BACFC3B2C40A52CB193 /* MediaImageDownloadProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaImageDownloadProgress.swift; sourceTree = "<group>"; };
+		67FED5A66F2F82D40AE6A9D7 /* MediaViewerInteractionSurface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewerInteractionSurface.swift; sourceTree = "<group>"; };
+		68D406FA422B150850C026AE /* FamilyMediaTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMediaTVUITests.swift; sourceTree = "<group>"; };
+		6A59CC736586DDD09F09F783 /* MediaBrowseSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaBrowseSessionController.swift; sourceTree = "<group>"; };
+		6B88F3F9C342B26B83839F32 /* TimelineLibraryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineLibraryContentView.swift; sourceTree = "<group>"; };
+		7072BF8323CD337176F677B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71EE122E4CC9422DBAA104EB /* MediaGridMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaGridMetrics.swift; sourceTree = "<group>"; };
+		7438772E8E35606DEF5DFFE2 /* TVTimelineContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVTimelineContentView.swift; sourceTree = "<group>"; };
+		79745C5973847CFB3093D288 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7AFF50710E8A8F710CCB4605 /* FamilyMediaiOSUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FamilyMediaiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E23971F0DFE2B43C6D700B9 /* StagedRemoteImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagedRemoteImageLoaderTests.swift; sourceTree = "<group>"; };
+		7E5ED819BE2473A3216E7B39 /* MediaLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaLibraryView.swift; sourceTree = "<group>"; };
+		7EBA87EA36065672CF44EB9B /* FamilyMediaiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMediaiOSApp.swift; sourceTree = "<group>"; };
+		7FE0429B10C99FDF972779F3 /* ViewTaskControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTaskControllerTests.swift; sourceTree = "<group>"; };
+		82F8CCE5B7D2BCDA257FA121 /* AppMessage+iOSStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppMessage+iOSStyle.swift"; sourceTree = "<group>"; };
+		84F1FEF70C265C80F03D1C98 /* MediaImagePipelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaImagePipelineTests.swift; sourceTree = "<group>"; };
+		868F94E12832CF5ECA28F30A /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
+		889A1166AA6E3CB02CFEB019 /* MediaViewerOptionsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewerOptionsSheet.swift; sourceTree = "<group>"; };
+		8900EA8F8BA392B56CE192FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8948D6E1EF08C518CA92BD67 /* FamilyMediaiOSUnitTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FamilyMediaiOSUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		895383AD1D0E4610EF7AA2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8A66B46D293421AAC7CB9315 /* MediaSourcePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSourcePresentation.swift; sourceTree = "<group>"; };
+		8AA10F738FDB32715D51DD94 /* ContentUnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUnavailableView.swift; sourceTree = "<group>"; };
+		8F4C6DC07A903CBFAD3BFC0B /* MediaThumbnailPreheaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaThumbnailPreheaterTests.swift; sourceTree = "<group>"; };
+		9781D6ED684BF63CE77F6546 /* MediaViewerStatusOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewerStatusOverlay.swift; sourceTree = "<group>"; };
+		987DD81BE68FC80CE790D3A0 /* MediaImageProgressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaImageProgressTests.swift; sourceTree = "<group>"; };
+		9D6BF9C3087AA60B5CD62A0C /* FamilyMediaCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FamilyMediaCore; path = Shared/FamilyMediaCore; sourceTree = SOURCE_ROOT; };
+		9F40AFB7F4730DB1076D6C4B /* MediaBrowseSessionControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaBrowseSessionControllerTests.swift; sourceTree = "<group>"; };
+		A4F43CE3D70002E64E38B02D /* SettingsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetails.swift; sourceTree = "<group>"; };
+		AA63488A166147F095148F60 /* MediaViewerControlsBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewerControlsBar.swift; sourceTree = "<group>"; };
+		AD426448020C4ACE06D1D89D /* PlayerSurfaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSurfaceView.swift; sourceTree = "<group>"; };
+		AE1A347B5ACFDA36EE88A75C /* ClientDiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDiagnosticsView.swift; sourceTree = "<group>"; };
+		AE2D6961406259B544CFA346 /* PhotoLoadStateReporting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLoadStateReporting.swift; sourceTree = "<group>"; };
+		B4987BB2222C167CC3992B87 /* MediaSourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSourcesView.swift; sourceTree = "<group>"; };
+		B5B38114C381F11572C990E4 /* ScanStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanStatusView.swift; sourceTree = "<group>"; };
+		BC70841D4459DC7B2B8E0FE5 /* MediaThumbnailPreheater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaThumbnailPreheater.swift; sourceTree = "<group>"; };
+		BD2CE0674B13BA09B3C0F58E /* ViewerPagingGestureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerPagingGestureTests.swift; sourceTree = "<group>"; };
+		BD3B7689F52C2C8E15ADF335 /* TVSystemVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVSystemVideoPlayer.swift; sourceTree = "<group>"; };
+		C4507CB1BE6171F7EE32E038 /* PlaybackIdleTimerControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackIdleTimerControllerTests.swift; sourceTree = "<group>"; };
+		C7C7414BDDAAF1F29A309217 /* FamilyMediaTVTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMediaTVTheme.swift; sourceTree = "<group>"; };
+		C7C92C8066ECACF8C7CA3E6B /* ViewTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTaskController.swift; sourceTree = "<group>"; };
+		C802839E09FD8D1B577A1326 /* NumericSettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericSettingRow.swift; sourceTree = "<group>"; };
+		CD30E45A852014533EFF020C /* RootNavigationStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationStateTests.swift; sourceTree = "<group>"; };
+		CDCC15D79C5D61A4FF518485 /* DemoArtworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoArtworkView.swift; sourceTree = "<group>"; };
+		CEFA0AD9A1E77FC186543426 /* CachedRemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedRemoteImage.swift; sourceTree = "<group>"; };
+		D3C70C17A657883B2AA2DD16 /* MediaViewerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewerScreen.swift; sourceTree = "<group>"; };
+		D582EEF27DAC8E01DB9B1F0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD3A0987E804DFF8DDE4BDB2 /* ViewerChromePolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerChromePolicyTests.swift; sourceTree = "<group>"; };
+		DF69555FEB107F7F74AF9987 /* RootPresentationPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresentationPolicy.swift; sourceTree = "<group>"; };
+		E0BB3957604A8BDEC0351573 /* MediaInformationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInformationDetailView.swift; sourceTree = "<group>"; };
+		E20BA81933AFCF2D65D22894 /* ZoomablePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomablePhotoView.swift; sourceTree = "<group>"; };
+		E2D807120BA487D19520D771 /* ViewerAdjacentPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerAdjacentPreview.swift; sourceTree = "<group>"; };
+		E8CF7C9E7455C11AFABCD249 /* PhotoViewerContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerContent.swift; sourceTree = "<group>"; };
+		E90B1CD8A23CD0F9E77AD86A /* TVClientDiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVClientDiagnosticsView.swift; sourceTree = "<group>"; };
+		EAF7BB17C3E7833D56752F18 /* FamilyMediaiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMediaiOSUITests.swift; sourceTree = "<group>"; };
+		ED7F09D7400D96338883AB27 /* ViewerChromeControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerChromeControllerTests.swift; sourceTree = "<group>"; };
+		EDFA38255356F312D88F4E9F /* SettingsComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsComponents.swift; sourceTree = "<group>"; };
+		F2281D1C95A1F385C780BF24 /* ViewerDismissGestureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerDismissGestureTests.swift; sourceTree = "<group>"; };
+		F29A827CBBA9ACA102FD576A /* MediaImageLoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaImageLoadingIndicator.swift; sourceTree = "<group>"; };
+		F7E42CF6F1C423CC617E15A5 /* MediaViewerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewerScreen.swift; sourceTree = "<group>"; };
+		FA70499E684038C15FC5F208 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		FCD236DFA298A201877F9638 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C35A4A235ACFC559815C1C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6689377E3EC9EE2B5C118223 /* FamilyMediaCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98AA2B55B2A9029731916D0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB83C4AC1D697F4C01E5B9B3 /* FamilyMediaCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0785180A83CEA21367777B0E /* FamilyMediaiOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EAF7BB17C3E7833D56752F18 /* FamilyMediaiOSUITests.swift */,
+			);
+			name = FamilyMediaiOSUITests;
+			path = iOS/FamilyMediaiOSUITests;
+			sourceTree = "<group>";
+		};
+		0ABE16C339993EDEB4EA83A2 /* SharedUI */ = {
+			isa = PBXGroup;
+			children = (
+				48E3C225920BBA90B01177DB /* AppMessage+TVStyle.swift */,
+				8AA10F738FDB32715D51DD94 /* ContentUnavailableView.swift */,
+				C7C7414BDDAAF1F29A309217 /* FamilyMediaTVTheme.swift */,
+				3C2D95A0E19C9AA3C486B653 /* MediaArtworkMetrics.swift */,
+				33EE2982AF8D2E7F909BA142 /* MediaThumbnailView.swift */,
+				C802839E09FD8D1B577A1326 /* NumericSettingRow.swift */,
+			);
+			path = SharedUI;
+			sourceTree = "<group>";
+		};
+		11224DEB13423EB74743F2DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C5ED02721A0FE72FDD42E90 /* FamilyMediaiOS.app */,
+				7AFF50710E8A8F710CCB4605 /* FamilyMediaiOSUITests.xctest */,
+				8948D6E1EF08C518CA92BD67 /* FamilyMediaiOSUnitTests.xctest */,
+				62D6BABE0FBDB4DF421C8A20 /* FamilyMediaTV.app */,
+				373C2E2F74F9052638FDE65E /* FamilyMediaTVUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11A0E7585485EE8A4C2A0B67 /* MediaViewer */ = {
+			isa = PBXGroup;
+			children = (
+				023F9184111C4E92C76E866B /* MediaViewerControls.swift */,
+				4C3ABE59AE1C3969D7F75D24 /* MediaViewerPanels.swift */,
+				F7E42CF6F1C423CC617E15A5 /* MediaViewerScreen.swift */,
+				3C8296E3253325C0E77AEC3E /* PhotoRemoteControlCaptureView.swift */,
+				E8CF7C9E7455C11AFABCD249 /* PhotoViewerContent.swift */,
+				BD3B7689F52C2C8E15ADF335 /* TVSystemVideoPlayer.swift */,
+			);
+			path = MediaViewer;
+			sourceTree = "<group>";
+		};
+		15A2FCF626C92EDF84D40B3F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6563364ECA8F6A82EAC7119C /* FamilyMediaTVApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1A3B19F3D038D790D2667135 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				19265C31ABF062769E2BB104 /* HomeEntryView.swift */,
+				8900EA8F8BA392B56CE192FE /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2DD8FA4A5FFB42511F8865AC /* FamilyMediaiOS */ = {
+			isa = PBXGroup;
+			children = (
+				3CDD84F5429D23AFEBE2A143 /* App */,
+				E6F2C14FD4B526D93ED11CEC /* Features */,
+				9B5205208037A304314565ED /* SharedUI */,
+			);
+			path = FamilyMediaiOS;
+			sourceTree = "<group>";
+		};
+		33DD113E839A086558BFAB75 /* FamilyMediaTV */ = {
+			isa = PBXGroup;
+			children = (
+				7072BF8323CD337176F677B4 /* Assets.xcassets */,
+				EE2CFB7FC6FFD7A341C3738F /* Resources */,
+				8386A5A2EEC21AE9CEDBD50D /* Sources */,
+			);
+			name = FamilyMediaTV;
+			path = TV/FamilyMediaTV;
+			sourceTree = "<group>";
+		};
+		3CDD84F5429D23AFEBE2A143 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7EBA87EA36065672CF44EB9B /* FamilyMediaiOSApp.swift */,
+				4683D26A81261ECD040AA32F /* IPadRootSplitView.swift */,
+				073B1DD6C9F35B3E40F2C039 /* PhoneRootView.swift */,
+				0828938194C00EFA068BB92A /* RootNavigationState.swift */,
+				DF69555FEB107F7F74AF9987 /* RootPresentationPolicy.swift */,
+				50890BE48721B26146E1D908 /* RootTabView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3CE8BD540561965BA4AA8A37 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2DD8FA4A5FFB42511F8865AC /* FamilyMediaiOS */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		41D07FE8268EC686A745708F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				19A31E7A0F39984068F82C13 /* TVWelcomeView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		57789AEE67F8589614B98B5C /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				9D6BF9C3087AA60B5CD62A0C /* FamilyMediaCore */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		586512143AEF3D31E097BEF6 /* MediaGrid */ = {
+			isa = PBXGroup;
+			children = (
+				099BF4A87326135C31F8FB8D /* MediaCardView.swift */,
+				71EE122E4CC9422DBAA104EB /* MediaGridMetrics.swift */,
+				36357F080A6BA98A2D357FAB /* MediaGridView.swift */,
+				7438772E8E35606DEF5DFFE2 /* TVTimelineContentView.swift */,
+			);
+			path = MediaGrid;
+			sourceTree = "<group>";
+		};
+		72C04E04CC0644F10C7C8790 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AE1A347B5ACFDA36EE88A75C /* ClientDiagnosticsView.swift */,
+				EDFA38255356F312D88F4E9F /* SettingsComponents.swift */,
+				A4F43CE3D70002E64E38B02D /* SettingsDetails.swift */,
+				FCD236DFA298A201877F9638 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7D449F698807B8E91466499B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B5B38114C381F11572C990E4 /* ScanStatusView.swift */,
+				868F94E12832CF5ECA28F30A /* SettingsSection.swift */,
+				43EFC3B768947D2677E2B484 /* SettingsSections.swift */,
+				79745C5973847CFB3093D288 /* SettingsView.swift */,
+				E90B1CD8A23CD0F9E77AD86A /* TVClientDiagnosticsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		830465991C2EC02CF19F0395 /* FamilyMediaAppleUI */ = {
+			isa = PBXGroup;
+			children = (
+				525808C7109536764265BEAB /* AppDependencies.swift */,
+				CEFA0AD9A1E77FC186543426 /* CachedRemoteImage.swift */,
+				CDCC15D79C5D61A4FF518485 /* DemoArtworkView.swift */,
+				404CCD1BDE32DB5FC70D681E /* DemoMediaCatalogService.swift */,
+				4D346151B5916C7677E1604D /* ImageMemoryCache.swift */,
+				6A59CC736586DDD09F09F783 /* MediaBrowseSessionController.swift */,
+				66DF1BACFC3B2C40A52CB193 /* MediaImageDownloadProgress.swift */,
+				F29A827CBBA9ACA102FD576A /* MediaImageLoadingIndicator.swift */,
+				615D7F5259F15A7BB6AAF21C /* MediaImagePipeline.swift */,
+				2D63EB1B5E15ABD040AA4B11 /* MediaInformationField+AppleUI.swift */,
+				8A66B46D293421AAC7CB9315 /* MediaSourcePresentation.swift */,
+				BC70841D4459DC7B2B8E0FE5 /* MediaThumbnailPreheater.swift */,
+				0ED115A3DB521741FE990D2E /* NetworkRecoveryObserver.swift */,
+				AE2D6961406259B544CFA346 /* PhotoLoadStateReporting.swift */,
+				29E5D843833CA2DE94D08918 /* PlaybackIdleTimerController.swift */,
+				AD426448020C4ACE06D1D89D /* PlayerSurfaceView.swift */,
+				0EB6333CF8F5B2C804AA81B4 /* PrivacyInfo.xcprivacy */,
+				0E8E5093C9037602E5ACEABF /* StagedRemoteImage.swift */,
+				366C0F1CD8A07572C38794EC /* StagedRemoteImageLoader.swift */,
+				602A27868AC6D392DC9A757C /* StagedRemoteImagePhase.swift */,
+				291CB28F81D6C36CB409A3AF /* ViewerChromeController.swift */,
+				073179CFAA1F6779C0F66133 /* ViewerChromePolicy.swift */,
+				C7C92C8066ECACF8C7CA3E6B /* ViewTaskController.swift */,
+			);
+			name = FamilyMediaAppleUI;
+			path = Shared/FamilyMediaAppleUI;
+			sourceTree = "<group>";
+		};
+		8386A5A2EEC21AE9CEDBD50D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B9634E73DE33B40858364DFA /* FamilyMediaTV */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8781F06605823BF7754AB63E /* MediaViewer */ = {
+			isa = PBXGroup;
+			children = (
+				E0BB3957604A8BDEC0351573 /* MediaInformationDetailView.swift */,
+				4C4886B18B5933C3EC6C3115 /* MediaViewerContent.swift */,
+				AA63488A166147F095148F60 /* MediaViewerControlsBar.swift */,
+				67FED5A66F2F82D40AE6A9D7 /* MediaViewerInteractionSurface.swift */,
+				889A1166AA6E3CB02CFEB019 /* MediaViewerOptionsSheet.swift */,
+				D3C70C17A657883B2AA2DD16 /* MediaViewerScreen.swift */,
+				9781D6ED684BF63CE77F6546 /* MediaViewerStatusOverlay.swift */,
+				E2D807120BA487D19520D771 /* ViewerAdjacentPreview.swift */,
+				60EC3CE73445DE9CD2EB9419 /* ViewerDismissGesture.swift */,
+				14CB1F736B86CED14A901EF3 /* ViewerNavigationGesture.swift */,
+				5CAE5CD0DFD66B2D2985C9CA /* ViewerPagingGesture.swift */,
+			);
+			path = MediaViewer;
+			sourceTree = "<group>";
+		};
+		99B4041B19AB371C3E9E9778 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				895383AD1D0E4610EF7AA2D9 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9B5205208037A304314565ED /* SharedUI */ = {
+			isa = PBXGroup;
+			children = (
+				82F8CCE5B7D2BCDA257FA121 /* AppMessage+iOSStyle.swift */,
+				FA70499E684038C15FC5F208 /* EmptyStateView.swift */,
+				5044ADD9EC6757B0DBCF4A01 /* FamilyMediaAdaptiveLayout.swift */,
+				2835CE6D17A1D55AA9F3212B /* FamilyMediaTheme.swift */,
+				2B28F53632C326DC5AEF0A47 /* MediaThumbnailView.swift */,
+				E20BA81933AFCF2D65D22894 /* ZoomablePhotoView.swift */,
+			);
+			path = SharedUI;
+			sourceTree = "<group>";
+		};
+		9F14B3FF2635664C476C20E0 /* MediaLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				61BD85E66547848E667F0F8D /* FamilyMediaCategoriesView.swift */,
+				7E5ED819BE2473A3216E7B39 /* MediaLibraryView.swift */,
+				B4987BB2222C167CC3992B87 /* MediaSourcesView.swift */,
+				343F775655D30696F996FA93 /* MediaTileView.swift */,
+				6B88F3F9C342B26B83839F32 /* TimelineLibraryContentView.swift */,
+			);
+			path = MediaLibrary;
+			sourceTree = "<group>";
+		};
+		A1568D22EF3C0FF5BE67EC57 /* FamilyMediaiOSUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				1B70E5529B94FFED56C32CE1 /* FamilyMediaAdaptiveLayoutTests.swift */,
+				29D752C8780BB12AD9CD730D /* KeychainJellyfinSessionStoreTests.swift */,
+				9F40AFB7F4730DB1076D6C4B /* MediaBrowseSessionControllerTests.swift */,
+				84F1FEF70C265C80F03D1C98 /* MediaImagePipelineTests.swift */,
+				987DD81BE68FC80CE790D3A0 /* MediaImageProgressTests.swift */,
+				8F4C6DC07A903CBFAD3BFC0B /* MediaThumbnailPreheaterTests.swift */,
+				18ADD3B9F820D2E98482233F /* NetworkRecoveryObserverTests.swift */,
+				2E339F29085C55B09C03E66E /* PhotoZoomScrollViewTests.swift */,
+				C4507CB1BE6171F7EE32E038 /* PlaybackIdleTimerControllerTests.swift */,
+				17F09218BB38DC2125D5DCF7 /* PlayerSurfaceViewTests.swift */,
+				CD30E45A852014533EFF020C /* RootNavigationStateTests.swift */,
+				7E23971F0DFE2B43C6D700B9 /* StagedRemoteImageLoaderTests.swift */,
+				1F45534CBBBB7AF70BC1C67D /* SystemMediaPlaybackEventObserverTests.swift */,
+				ED7F09D7400D96338883AB27 /* ViewerChromeControllerTests.swift */,
+				DD3A0987E804DFF8DDE4BDB2 /* ViewerChromePolicyTests.swift */,
+				F2281D1C95A1F385C780BF24 /* ViewerDismissGestureTests.swift */,
+				BD2CE0674B13BA09B3C0F58E /* ViewerPagingGestureTests.swift */,
+				7FE0429B10C99FDF972779F3 /* ViewTaskControllerTests.swift */,
+			);
+			name = FamilyMediaiOSUnitTests;
+			path = iOS/FamilyMediaiOSUnitTests;
+			sourceTree = "<group>";
+		};
+		B6DBDFDBEE82B17BA696AEC1 /* FamilyMediaTVUITests */ = {
+			isa = PBXGroup;
+			children = (
+				68D406FA422B150850C026AE /* FamilyMediaTVUITests.swift */,
+			);
+			name = FamilyMediaTVUITests;
+			path = TV/FamilyMediaTVUITests;
+			sourceTree = "<group>";
+		};
+		B7AE086DEA737B64CFAABE85 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				1A3B19F3D038D790D2667135 /* Home */,
+				586512143AEF3D31E097BEF6 /* MediaGrid */,
+				11A0E7585485EE8A4C2A0B67 /* MediaViewer */,
+				41D07FE8268EC686A745708F /* Onboarding */,
+				7D449F698807B8E91466499B /* Settings */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		B9634E73DE33B40858364DFA /* FamilyMediaTV */ = {
+			isa = PBXGroup;
+			children = (
+				15A2FCF626C92EDF84D40B3F /* App */,
+				B7AE086DEA737B64CFAABE85 /* Features */,
+				0ABE16C339993EDEB4EA83A2 /* SharedUI */,
+			);
+			path = FamilyMediaTV;
+			sourceTree = "<group>";
+		};
+		B9BD36B988AB67012111E53C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				0DD19EB135000FBBEA4D4F16 /* WelcomeView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		C0C3171C1DF5509BCA0A2CCE /* FamilyMediaiOS */ = {
+			isa = PBXGroup;
+			children = (
+				D582EEF27DAC8E01DB9B1F0E /* Assets.xcassets */,
+				99B4041B19AB371C3E9E9778 /* Resources */,
+				3CE8BD540561965BA4AA8A37 /* Sources */,
+			);
+			name = FamilyMediaiOS;
+			path = iOS/FamilyMediaiOS;
+			sourceTree = "<group>";
+		};
+		E6F2C14FD4B526D93ED11CEC /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				9F14B3FF2635664C476C20E0 /* MediaLibrary */,
+				8781F06605823BF7754AB63E /* MediaViewer */,
+				B9BD36B988AB67012111E53C /* Onboarding */,
+				72C04E04CC0644F10C7C8790 /* Settings */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		EE2CFB7FC6FFD7A341C3738F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5CE21EFFC8D0526BE5B028B8 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F994B4FF3D6DEA399603634A = {
+			isa = PBXGroup;
+			children = (
+				830465991C2EC02CF19F0395 /* FamilyMediaAppleUI */,
+				C0C3171C1DF5509BCA0A2CCE /* FamilyMediaiOS */,
+				0785180A83CEA21367777B0E /* FamilyMediaiOSUITests */,
+				A1568D22EF3C0FF5BE67EC57 /* FamilyMediaiOSUnitTests */,
+				33DD113E839A086558BFAB75 /* FamilyMediaTV */,
+				B6DBDFDBEE82B17BA696AEC1 /* FamilyMediaTVUITests */,
+				57789AEE67F8589614B98B5C /* Packages */,
+				11224DEB13423EB74743F2DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		782BF02081FC4D4D7A0E3E2D /* FamilyMediaiOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0095ECCEB1B9632CC1CBE42D /* Build configuration list for PBXNativeTarget "FamilyMediaiOSUITests" */;
+			buildPhases = (
+				2CFBB0AD57E9863E6E86EAC6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11961076914232B6FFE24D81 /* PBXTargetDependency */,
+			);
+			name = FamilyMediaiOSUITests;
+			packageProductDependencies = (
+			);
+			productName = FamilyMediaiOSUITests;
+			productReference = 7AFF50710E8A8F710CCB4605 /* FamilyMediaiOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		93520198DEE38EE1E46C035D /* FamilyMediaTVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DF6B1D1AF16E26C46BD2E36 /* Build configuration list for PBXNativeTarget "FamilyMediaTVUITests" */;
+			buildPhases = (
+				76047BDF49AB582875E65340 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FAD44A56B74450540D40797 /* PBXTargetDependency */,
+			);
+			name = FamilyMediaTVUITests;
+			packageProductDependencies = (
+			);
+			productName = FamilyMediaTVUITests;
+			productReference = 373C2E2F74F9052638FDE65E /* FamilyMediaTVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		A2E468A054FA54313E2A1A2B /* FamilyMediaiOSUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E08D2CE644CF9ECB7474C88 /* Build configuration list for PBXNativeTarget "FamilyMediaiOSUnitTests" */;
+			buildPhases = (
+				51ABA1090424137DF820DAA4 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2CA09E8CEE7C97825343603 /* PBXTargetDependency */,
+			);
+			name = FamilyMediaiOSUnitTests;
+			packageProductDependencies = (
+			);
+			productName = FamilyMediaiOSUnitTests;
+			productReference = 8948D6E1EF08C518CA92BD67 /* FamilyMediaiOSUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F10CE994C5B25A349547BED8 /* FamilyMediaiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 009E5942D352403544AC4DF4 /* Build configuration list for PBXNativeTarget "FamilyMediaiOS" */;
+			buildPhases = (
+				BA157B7DF0FCB74AD0D901D8 /* Sources */,
+				DBBAF0FB27522223BD889983 /* Resources */,
+				3C35A4A235ACFC559815C1C0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FamilyMediaiOS;
+			packageProductDependencies = (
+				7BC698665115CC4C66DA760C /* FamilyMediaCore */,
+			);
+			productName = FamilyMediaiOS;
+			productReference = 2C5ED02721A0FE72FDD42E90 /* FamilyMediaiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F12159FBD24317A1413FD9B4 /* FamilyMediaTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E1327DE1368A3785267EF74 /* Build configuration list for PBXNativeTarget "FamilyMediaTV" */;
+			buildPhases = (
+				1FF8918BB9E1249702BE8156 /* Sources */,
+				D1FEA37AE94E93DD30B8A9B2 /* Resources */,
+				98AA2B55B2A9029731916D0D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FamilyMediaTV;
+			packageProductDependencies = (
+				2544F45ABCCCAAFC93B3302A /* FamilyMediaCore */,
+			);
+			productName = FamilyMediaTV;
+			productReference = 62D6BABE0FBDB4DF421C8A20 /* FamilyMediaTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		482600BC838BACF7601E0BCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					782BF02081FC4D4D7A0E3E2D = {
+						ProvisioningStyle = Automatic;
+						TestTargetID = F10CE994C5B25A349547BED8;
+					};
+					93520198DEE38EE1E46C035D = {
+						ProvisioningStyle = Automatic;
+						TestTargetID = F12159FBD24317A1413FD9B4;
+					};
+					A2E468A054FA54313E2A1A2B = {
+						ProvisioningStyle = Automatic;
+					};
+					F10CE994C5B25A349547BED8 = {
+						ProvisioningStyle = Automatic;
+					};
+					F12159FBD24317A1413FD9B4 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E0669127451D0703972163DB /* Build configuration list for PBXProject "FamilyMediaClient" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = F994B4FF3D6DEA399603634A;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9F3BB1A46606215D8F12322C /* XCLocalSwiftPackageReference "Shared/FamilyMediaCore" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 11224DEB13423EB74743F2DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F12159FBD24317A1413FD9B4 /* FamilyMediaTV */,
+				93520198DEE38EE1E46C035D /* FamilyMediaTVUITests */,
+				F10CE994C5B25A349547BED8 /* FamilyMediaiOS */,
+				782BF02081FC4D4D7A0E3E2D /* FamilyMediaiOSUITests */,
+				A2E468A054FA54313E2A1A2B /* FamilyMediaiOSUnitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1FEA37AE94E93DD30B8A9B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2C291C15D6A59AFCFE13B16 /* Assets.xcassets in Resources */,
+				5678F9DB0E788FCF222FB733 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBBAF0FB27522223BD889983 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69873E6319E5840EDA8280A6 /* Assets.xcassets in Resources */,
+				F3F93F762BBE25B5DCDE8CB5 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FF8918BB9E1249702BE8156 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0276E71AC2AF557D972EE9BE /* AppDependencies.swift in Sources */,
+				35570CBA045E8C443355C921 /* AppMessage+TVStyle.swift in Sources */,
+				32293488EFA0FB7E0C876EEC /* CachedRemoteImage.swift in Sources */,
+				1F95E1DB6D5DE0E40B288876 /* ContentUnavailableView.swift in Sources */,
+				6A4E3379E71F7E043BBEF237 /* DemoArtworkView.swift in Sources */,
+				A681FEA3DFB3A02E45244D54 /* DemoMediaCatalogService.swift in Sources */,
+				B06EC4DCAA15189FAD3B6DA1 /* FamilyMediaTVApp.swift in Sources */,
+				30AC6CFB866D68A02D137D1B /* FamilyMediaTVTheme.swift in Sources */,
+				178966D329DD1796729FA64A /* HomeEntryView.swift in Sources */,
+				14D337F27E8FB4BAAAA8722A /* HomeView.swift in Sources */,
+				1B99A06B5956758DD3E5CFC4 /* ImageMemoryCache.swift in Sources */,
+				F18C1EC82879D14716D108AD /* MediaArtworkMetrics.swift in Sources */,
+				E555EFE32067F7ABCB78DC23 /* MediaBrowseSessionController.swift in Sources */,
+				CA526B77AEE84B151FEE6DCD /* MediaCardView.swift in Sources */,
+				63D2F9EA723308CEB4F5A36E /* MediaGridMetrics.swift in Sources */,
+				6C685B2FA008ACE2CC97A4A6 /* MediaGridView.swift in Sources */,
+				0D8982B4D6EEAF2F369DB3AE /* MediaImageDownloadProgress.swift in Sources */,
+				04812BD073991EF78E6AED60 /* MediaImageLoadingIndicator.swift in Sources */,
+				51AC7B5BDA19F45566C05E31 /* MediaImagePipeline.swift in Sources */,
+				5324EE3965FF9D423A3F7732 /* MediaInformationField+AppleUI.swift in Sources */,
+				1C582F0BA7669B4AD6C74A90 /* MediaSourcePresentation.swift in Sources */,
+				672138735BA640D9CECD80A0 /* MediaThumbnailPreheater.swift in Sources */,
+				E48861022E605C1AB9A59395 /* MediaThumbnailView.swift in Sources */,
+				784B3F09433FE24D26D73837 /* MediaViewerControls.swift in Sources */,
+				88BA5006253D7D692B69BB5D /* MediaViewerPanels.swift in Sources */,
+				C83A14BF753CFE22D5EFCADE /* MediaViewerScreen.swift in Sources */,
+				040793A871F2CB7F7BC3E907 /* NetworkRecoveryObserver.swift in Sources */,
+				F6FE5B12E5C4972B16D4123E /* NumericSettingRow.swift in Sources */,
+				FE28C450E79C55AEAAC1DC11 /* PhotoLoadStateReporting.swift in Sources */,
+				02F4343D02A472F166251354 /* PhotoRemoteControlCaptureView.swift in Sources */,
+				808DA416022D7C5AA3BA47C0 /* PhotoViewerContent.swift in Sources */,
+				0D1D2910C33C79E94AB930B0 /* PlaybackIdleTimerController.swift in Sources */,
+				33990627307E0A17EFF2F7AB /* PlayerSurfaceView.swift in Sources */,
+				E2539F1209615040B37EB8FE /* ScanStatusView.swift in Sources */,
+				146412348B468E6918F28308 /* SettingsSection.swift in Sources */,
+				71EA5B8908E3A206D681A83C /* SettingsSections.swift in Sources */,
+				27042711EB4E1B3F0B52EDEF /* SettingsView.swift in Sources */,
+				02DFDF324DCA8CBFB92EE498 /* StagedRemoteImage.swift in Sources */,
+				E77FE719ECD53576E77BCA9F /* StagedRemoteImageLoader.swift in Sources */,
+				4179CACB343AFCC46D4976FE /* StagedRemoteImagePhase.swift in Sources */,
+				A1BCA608D43BD7DB610035B4 /* TVClientDiagnosticsView.swift in Sources */,
+				FC40F9E9749E2422256D7B6F /* TVSystemVideoPlayer.swift in Sources */,
+				A34F55790BFA08F02376A0F8 /* TVTimelineContentView.swift in Sources */,
+				89A9CC87159C612192131019 /* TVWelcomeView.swift in Sources */,
+				2E0D116B57E460D927906129 /* ViewTaskController.swift in Sources */,
+				1772CC65A8D35E6D3E5283B5 /* ViewerChromeController.swift in Sources */,
+				609528DD5D7167DCAA6D52F3 /* ViewerChromePolicy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFBB0AD57E9863E6E86EAC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB2A8FF814D5128C88A11F6 /* FamilyMediaiOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51ABA1090424137DF820DAA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD0A7988478C29E493D2D5FC /* FamilyMediaAdaptiveLayoutTests.swift in Sources */,
+				A5DAF5E6C3393CE1B8554302 /* KeychainJellyfinSessionStoreTests.swift in Sources */,
+				3C6A2D0D88DAE996F6A51DF5 /* MediaBrowseSessionControllerTests.swift in Sources */,
+				9F0A1B6B33C23A8FAD3E0BC5 /* MediaImagePipelineTests.swift in Sources */,
+				122807EA1368FD93934D2D59 /* MediaImageProgressTests.swift in Sources */,
+				93D17FB3B939430FCFFC31D3 /* MediaThumbnailPreheaterTests.swift in Sources */,
+				102CEB99E8277BCA178A66F3 /* NetworkRecoveryObserverTests.swift in Sources */,
+				FBC115C854ECF42C700612E4 /* PhotoZoomScrollViewTests.swift in Sources */,
+				69C65C3DD0D698C27899B5D1 /* PlaybackIdleTimerControllerTests.swift in Sources */,
+				D95B76E12D5F69B2C0A8C5DC /* PlayerSurfaceViewTests.swift in Sources */,
+				71C46169B85957593217C40D /* RootNavigationStateTests.swift in Sources */,
+				1C4A59B26EBED7FA90E65C1C /* StagedRemoteImageLoaderTests.swift in Sources */,
+				1FD2B23654FE8EB27B736BE6 /* SystemMediaPlaybackEventObserverTests.swift in Sources */,
+				D230BB750E0C84DCCC997B9C /* ViewTaskControllerTests.swift in Sources */,
+				BCC5A4E228065F507C2F014B /* ViewerChromeControllerTests.swift in Sources */,
+				C0722F76588EC92779370AD0 /* ViewerChromePolicyTests.swift in Sources */,
+				ACAF18FD3F68867FB45D85C8 /* ViewerDismissGestureTests.swift in Sources */,
+				2AF13E8205A0452CAB4DB6C8 /* ViewerPagingGestureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76047BDF49AB582875E65340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594A8B51B647E08F71FCCB7D /* FamilyMediaTVUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA157B7DF0FCB74AD0D901D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4CF98130D1583B15844E6C /* AppDependencies.swift in Sources */,
+				830AC0121A8BC55236FE8AB6 /* AppMessage+iOSStyle.swift in Sources */,
+				46452DE13482EBA824684D32 /* CachedRemoteImage.swift in Sources */,
+				AC18FA6F51FE9C682ED53EE0 /* ClientDiagnosticsView.swift in Sources */,
+				2BEE2B9CB4C38857585979C1 /* DemoArtworkView.swift in Sources */,
+				34DC1644E63532ECA3E1A697 /* DemoMediaCatalogService.swift in Sources */,
+				50CE0831CB2EBFE10B1DCDA2 /* EmptyStateView.swift in Sources */,
+				9C42F17A0B6111160AE0F375 /* FamilyMediaAdaptiveLayout.swift in Sources */,
+				92115844F72AEC75B5A6A542 /* FamilyMediaCategoriesView.swift in Sources */,
+				5C6535913D80C93CEE3F3EC6 /* FamilyMediaTheme.swift in Sources */,
+				36CD601DEECAEF4B70C4F3CD /* FamilyMediaiOSApp.swift in Sources */,
+				F0A0E5E0546C93EF9853C275 /* IPadRootSplitView.swift in Sources */,
+				174461C4069A05181D5B7C99 /* ImageMemoryCache.swift in Sources */,
+				B050BA17161E2A3809642205 /* MediaBrowseSessionController.swift in Sources */,
+				9B1FC4B4EC24722A6C95A9D4 /* MediaImageDownloadProgress.swift in Sources */,
+				E381083A006F255BF66284B7 /* MediaImageLoadingIndicator.swift in Sources */,
+				3E01B27EFFC4CDFBC7E66EC3 /* MediaImagePipeline.swift in Sources */,
+				4778FD6C85D620BC73484C9F /* MediaInformationDetailView.swift in Sources */,
+				5F7F8919E081C1662085A83A /* MediaInformationField+AppleUI.swift in Sources */,
+				C41C6E35858E5745992DD1F9 /* MediaLibraryView.swift in Sources */,
+				3136F2766BBCDE8E301AE889 /* MediaSourcePresentation.swift in Sources */,
+				7673065F19191A86DB383B6F /* MediaSourcesView.swift in Sources */,
+				840F5AB9384D65550B59B97D /* MediaThumbnailPreheater.swift in Sources */,
+				5F5DEE6C5A47056020A6ACDA /* MediaThumbnailView.swift in Sources */,
+				F33EED9271666963719BA6FF /* MediaTileView.swift in Sources */,
+				1C2385F749DC65A6186D820C /* MediaViewerContent.swift in Sources */,
+				7425BF81BE7339A05350B2D9 /* MediaViewerControlsBar.swift in Sources */,
+				84650DCB124B547D60D75F92 /* MediaViewerInteractionSurface.swift in Sources */,
+				AC108837C9029ED64A823428 /* MediaViewerOptionsSheet.swift in Sources */,
+				7F60600C20BDE904BE519AF4 /* MediaViewerScreen.swift in Sources */,
+				E8F3B3173B44E0D386565221 /* MediaViewerStatusOverlay.swift in Sources */,
+				77BED894AFBCC316C14FA2D1 /* NetworkRecoveryObserver.swift in Sources */,
+				AD4C30E09011F57D1F3A7AAF /* PhoneRootView.swift in Sources */,
+				AC30BDFD47BF722DE6620CCB /* PhotoLoadStateReporting.swift in Sources */,
+				84E30E5496E060948B409751 /* PlaybackIdleTimerController.swift in Sources */,
+				CCB0C2D934AEEB07703AC827 /* PlayerSurfaceView.swift in Sources */,
+				203C1D3E762471E812DF5E14 /* RootNavigationState.swift in Sources */,
+				21D56A0CDE6A19AAB18F5C22 /* RootPresentationPolicy.swift in Sources */,
+				8FFC4A732A8B43BE6182717F /* RootTabView.swift in Sources */,
+				9C4DBF215D29ABE63649B194 /* SettingsComponents.swift in Sources */,
+				3AF1C6391FF6F7FACEF2B9A2 /* SettingsDetails.swift in Sources */,
+				E9130AB55ABACE306E13DF1E /* SettingsView.swift in Sources */,
+				CDA26791E8E56E232C283EC9 /* StagedRemoteImage.swift in Sources */,
+				8841EFCE5FB7E1928BAC376B /* StagedRemoteImageLoader.swift in Sources */,
+				6B41027E191BA8467240488A /* StagedRemoteImagePhase.swift in Sources */,
+				839AA514DDF9D82CCEDE9389 /* TimelineLibraryContentView.swift in Sources */,
+				4360D84CE67279ADFBAB4F4F /* ViewTaskController.swift in Sources */,
+				F33C63786DE4F9489A5679F8 /* ViewerAdjacentPreview.swift in Sources */,
+				43A9B66B72D2807B7250E07C /* ViewerChromeController.swift in Sources */,
+				4B103A524FCB4CC5FE7D5F53 /* ViewerChromePolicy.swift in Sources */,
+				F641EA9CD7392A1AD24E0BF3 /* ViewerDismissGesture.swift in Sources */,
+				56AE0DD53EACB38D6AD58339 /* ViewerNavigationGesture.swift in Sources */,
+				B72E82716246F8B93E72F2E0 /* ViewerPagingGesture.swift in Sources */,
+				C62B04BCE6EB8973018A6CF9 /* WelcomeView.swift in Sources */,
+				071028DA57716059E08C09A2 /* ZoomablePhotoView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11961076914232B6FFE24D81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F10CE994C5B25A349547BED8 /* FamilyMediaiOS */;
+			targetProxy = B0EABD2597D1A6E35C6CA4A5 /* PBXContainerItemProxy */;
+		};
+		9FAD44A56B74450540D40797 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F12159FBD24317A1413FD9B4 /* FamilyMediaTV */;
+			targetProxy = FEED3B340EF874D30B30D2A4 /* PBXContainerItemProxy */;
+		};
+		C2CA09E8CEE7C97825343603 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F10CE994C5B25A349547BED8 /* FamilyMediaiOS */;
+			targetProxy = D75A45C8D677450E8E3C0DDF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A4CC862C07E42661DC50B4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.senhu.familymedia.ios.uitests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FamilyMediaiOS;
+			};
+			name = Debug;
+		};
+		2BF7F8F77660B5B54F58C2A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				INFOPLIST_FILE = TV/FamilyMediaTV/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.senhu.familymedia.tv;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		2CA1C81ACBDFADB1E57EC9BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.senhu.familymedia.ios.unittests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FamilyMediaiOS.app/FamilyMediaiOS";
+			};
+			name = Debug;
+		};
+		2D8959784D91BF7DA1FEE8E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.senhu.familymedia.tv.uitests;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = FamilyMediaTV;
+			};
+			name = Debug;
+		};
+		4B392FE0E41B89A5900BD70E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Release;
+		};
+		8A2E79A247D0046720528EAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				INFOPLIST_FILE = iOS/FamilyMediaiOS/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.senhu.familymedia.ios;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8DA9BD741DFD58DAD1C6FE12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Debug;
+		};
+		B61E7E75F981B2E1E5D82966 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.senhu.familymedia.ios.unittests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FamilyMediaiOS.app/FamilyMediaiOS";
+			};
+			name = Release;
+		};
+		C371800B2D9733DC915D6CA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.senhu.familymedia.tv.uitests;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = FamilyMediaTV;
+			};
+			name = Release;
+		};
+		E093F55C456CA061A71B87C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				INFOPLIST_FILE = iOS/FamilyMediaiOS/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.senhu.familymedia.ios;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E90C7094F8077E1B313F2F25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				INFOPLIST_FILE = TV/FamilyMediaTV/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.senhu.familymedia.tv;
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		F594A75DBD1BFE821D16E0A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.senhu.familymedia.ios.uitests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FamilyMediaiOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0095ECCEB1B9632CC1CBE42D /* Build configuration list for PBXNativeTarget "FamilyMediaiOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A4CC862C07E42661DC50B4B /* Debug */,
+				F594A75DBD1BFE821D16E0A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		009E5942D352403544AC4DF4 /* Build configuration list for PBXNativeTarget "FamilyMediaiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E093F55C456CA061A71B87C2 /* Debug */,
+				8A2E79A247D0046720528EAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		0E1327DE1368A3785267EF74 /* Build configuration list for PBXNativeTarget "FamilyMediaTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E90C7094F8077E1B313F2F25 /* Debug */,
+				2BF7F8F77660B5B54F58C2A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4DF6B1D1AF16E26C46BD2E36 /* Build configuration list for PBXNativeTarget "FamilyMediaTVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D8959784D91BF7DA1FEE8E9 /* Debug */,
+				C371800B2D9733DC915D6CA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9E08D2CE644CF9ECB7474C88 /* Build configuration list for PBXNativeTarget "FamilyMediaiOSUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CA1C81ACBDFADB1E57EC9BD /* Debug */,
+				B61E7E75F981B2E1E5D82966 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E0669127451D0703972163DB /* Build configuration list for PBXProject "FamilyMediaClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DA9BD741DFD58DAD1C6FE12 /* Debug */,
+				4B392FE0E41B89A5900BD70E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		9F3BB1A46606215D8F12322C /* XCLocalSwiftPackageReference "Shared/FamilyMediaCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Shared/FamilyMediaCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2544F45ABCCCAAFC93B3302A /* FamilyMediaCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FamilyMediaCore;
+		};
+		7BC698665115CC4C66DA760C /* FamilyMediaCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FamilyMediaCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 482600BC838BACF7601E0BCB /* Project object */;
+}

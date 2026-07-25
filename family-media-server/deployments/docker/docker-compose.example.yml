@@ -1,0 +1,15 @@
+services:
+  family-media-server:
+    build:
+      context: ../..
+      dockerfile: deployments/docker/Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - /volume1/family-media:/media/library:ro
+      - family-media-data:/data
+      - ../../configs/config.example.yaml:/app/config.yaml:ro
+    restart: unless-stopped
+
+volumes:
+  family-media-data:

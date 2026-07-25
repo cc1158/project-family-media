@@ -1,0 +1,24 @@
+server:
+  host: "0.0.0.0"
+  port: 8080
+  publicBaseURL: "http://localhost:8080"
+
+media:
+  rootDir: "/media/library"
+
+index:
+  enabled: true
+  dbPath: "/data/media-index.db"
+
+scan:
+  intervalSeconds: 600
+
+thumbnail:
+  enabled: true
+  cacheDir: "/data/thumbnails"
+  maxSide: 480
+  batchSize: 100
+
+transcode:
+  enabled: false
+  workDir: "/data/transcode"

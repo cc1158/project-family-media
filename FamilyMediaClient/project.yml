@@ -1,0 +1,108 @@
+name: FamilyMediaClient
+options:
+  bundleIdPrefix: com.familymedia
+  deploymentTarget:
+    tvOS: "17.0"
+    iOS: "17.0"
+packages:
+  FamilyMediaCore:
+    path: Shared/FamilyMediaCore
+targets:
+  FamilyMediaTV:
+    type: application
+    platform: tvOS
+    sources:
+      - path: TV/FamilyMediaTV
+      - path: Shared/FamilyMediaAppleUI
+    dependencies:
+      - package: FamilyMediaCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.senhu.familymedia.tv
+        CODE_SIGN_STYLE: Automatic
+        INFOPLIST_FILE: TV/FamilyMediaTV/Resources/Info.plist
+        MARKETING_VERSION: 1.0.0
+        CURRENT_PROJECT_VERSION: 4
+        SWIFT_VERSION: 6.0
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ASSETCATALOG_COMPILER_APPICON_NAME: App Icon & Top Shelf Image
+  FamilyMediaiOS:
+    type: application
+    platform: iOS
+    sources:
+      - path: iOS/FamilyMediaiOS
+      - path: Shared/FamilyMediaAppleUI
+    dependencies:
+      - package: FamilyMediaCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.senhu.familymedia.ios
+        CODE_SIGN_STYLE: Automatic
+        INFOPLIST_FILE: iOS/FamilyMediaiOS/Resources/Info.plist
+        MARKETING_VERSION: 1.0.0
+        CURRENT_PROJECT_VERSION: 4
+        SWIFT_VERSION: 6.0
+        TARGETED_DEVICE_FAMILY: "1,2"
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+  FamilyMediaTVUITests:
+    type: bundle.ui-testing
+    platform: tvOS
+    sources:
+      - path: TV/FamilyMediaTVUITests
+    dependencies:
+      - target: FamilyMediaTV
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.senhu.familymedia.tv.uitests
+        CODE_SIGN_STYLE: Automatic
+        SWIFT_VERSION: 6.0
+        GENERATE_INFOPLIST_FILE: YES
+  FamilyMediaiOSUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: iOS/FamilyMediaiOSUITests
+    dependencies:
+      - target: FamilyMediaiOS
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.senhu.familymedia.ios.uitests
+        CODE_SIGN_STYLE: Automatic
+        SWIFT_VERSION: 6.0
+        GENERATE_INFOPLIST_FILE: YES
+  FamilyMediaiOSUnitTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: iOS/FamilyMediaiOSUnitTests
+    dependencies:
+      - target: FamilyMediaiOS
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.senhu.familymedia.ios.unittests
+        CODE_SIGN_STYLE: Automatic
+        SWIFT_VERSION: 6.0
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  FamilyMediaTV:
+    build:
+      targets:
+        FamilyMediaTV: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - FamilyMediaTVUITests
+  FamilyMediaiOS:
+    build:
+      targets:
+        FamilyMediaiOS: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - FamilyMediaiOSUnitTests
+        - FamilyMediaiOSUITests
