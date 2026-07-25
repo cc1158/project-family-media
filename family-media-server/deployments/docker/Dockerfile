@@ -12,7 +12,7 @@ RUN GOPROXY=${GOPROXY} CGO_ENABLED=0 go build \
     -ldflags "-s -w -X family-media-server/internal/platform/buildinfo.Version=${VERSION} -X family-media-server/internal/platform/buildinfo.Commit=${BUILD_COMMIT} -X family-media-server/internal/platform/buildinfo.BuiltAt=${BUILD_TIME}" \
     -o /out/family-media-server ./cmd/family-media-server
 
-FROM alpine:3.20
+FROM alpine:3.24
 RUN apk add --no-cache ca-certificates ffmpeg libheif-tools tzdata && addgroup -S app && adduser -S app -G app
 WORKDIR /app
 COPY --from=builder /out/family-media-server /app/family-media-server
