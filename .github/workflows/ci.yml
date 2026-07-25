@@ -1,0 +1,90 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  server:
+    name: Server
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: family-media-server
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: family-media-server/go.mod
+          cache-dependency-path: family-media-server/go.sum
+
+      - name: Test
+        run: go test ./...
+
+      - name: Vet
+        run: go vet ./...
+
+  apple-client:
+    name: Apple Client
+    runs-on: macos-15
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: FamilyMediaClient
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Test shared client logic
+        run: swift test
+
+      - name: Validate release configuration
+        run: python3 scripts/validate_release_configuration.py
+
+      - name: Verify generated Xcode project
+        run: |
+          xcodegen generate
+          git diff --exit-code -- FamilyMediaClient.xcodeproj/project.pbxproj
+
+      - name: Build iOS and iPadOS
+        run: >-
+          xcodebuild
+          -project FamilyMediaClient.xcodeproj
+          -scheme FamilyMediaiOS
+          -destination 'generic/platform=iOS'
+          CODE_SIGNING_ALLOWED=NO
+          -quiet
+          build
+
+      - name: Build tvOS
+        run: >-
+          xcodebuild
+          -project FamilyMediaClient.xcodeproj
+          -scheme FamilyMediaTV
+          -destination 'generic/platform=tvOS'
+          CODE_SIGNING_ALLOWED=NO
+          -quiet
+          build
+
+      - name: Check whitespace
+        working-directory: .
+        run: git diff --check

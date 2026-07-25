@@ -1,5 +1,7 @@
 # 家映
 
+[![CI](https://github.com/cc1158/project-family-media/actions/workflows/ci.yml/badge.svg)](https://github.com/cc1158/project-family-media/actions/workflows/ci.yml)
+
 家映是一套面向家庭 NAS 的私有多媒体系统，由 Go 服务端和原生 Apple 客户端组成。它可以同时连接自建家庭媒体服务与 Jellyfin，在 iPhone、iPad 和 Apple TV 上浏览、查看照片并播放视频。
 
 当前基线：`1.0.0-rc.2`。本阶段以稳定、可部署和可维护为主，不继续扩张功能范围。
@@ -45,6 +47,7 @@ python3 scripts/validate_release_configuration.py
 - [客户端架构](FamilyMediaClient/docs/architecture.md)
 - [服务端 API](family-media-server/docs/client_api.md)
 - [安全策略](SECURITY.md)
+- [参与项目](CONTRIBUTING.md)
 
 ## 版本边界
 
