@@ -42,8 +42,10 @@ public final class MediaPlaybackController: ObservableObject {
         self.systemEventObserver = systemEventObserver
     }
 
-    isolated deinit {
-        reset(deactivateAudioSession: true)
+    deinit {
+        MainActor.assumeIsolated {
+            reset(deactivateAudioSession: true)
+        }
     }
 
     public func configureVideo(
@@ -194,10 +196,10 @@ public final class MediaPlaybackController: ObservableObject {
             toleranceAfter: tolerance
         ) { [weak self] finished in
             Task { @MainActor [weak self] in
-                guard let self, seekGeneration == generation else { return }
-                isSeeking = false
+                guard let self, self.seekGeneration == generation else { return }
+                self.isSeeking = false
                 if finished {
-                    positionSeconds = target
+                    self.positionSeconds = target
                 }
                 onCompletion(finished)
             }
