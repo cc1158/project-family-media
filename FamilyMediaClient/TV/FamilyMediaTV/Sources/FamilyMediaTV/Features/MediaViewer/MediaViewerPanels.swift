@@ -40,7 +40,6 @@ struct MediaViewerOptionsPanel: View {
                 }
             }
             .buttonStyle(.borderedProminent)
-            .controlSize(.large)
             .focusSection()
             .frame(width: 420, alignment: .leading)
             .padding(40)
@@ -80,7 +79,6 @@ struct MediaInformationPanel: View {
                     .accessibilityIdentifier("viewer.information.back")
             }
             .buttonStyle(.borderedProminent)
-            .controlSize(.large)
             .frame(width: 720)
             .padding(48)
             .background(.black.opacity(0.92), in: RoundedRectangle(cornerRadius: 28))
