@@ -19,8 +19,10 @@ final class PlaybackIdleTimerController: ObservableObject {
         self.writeValue = writeValue
     }
 
-    isolated deinit {
-        release()
+    deinit {
+        MainActor.assumeIsolated {
+            release()
+        }
     }
 
     func setPlaybackActive(_ isActive: Bool) {
