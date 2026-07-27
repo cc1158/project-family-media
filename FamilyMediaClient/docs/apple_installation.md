@@ -13,7 +13,7 @@
 ```text
 iPhone:   com.senhu.familymedia.ios
 Apple TV: com.senhu.familymedia.tv
-Team:     在本机 Xcode 中选择你自己的 Apple Developer Team
+Team:     由本机 LocalSigning.xcconfig 提供同一个 Apple Developer Team
 ```
 
 如果 Bundle ID 或签名团队被更换，系统可能将它视为另一个 App，而不是原 App 的升级。
@@ -22,8 +22,19 @@ Team:     在本机 Xcode 中选择你自己的 Apple Developer Team
 
 1. 在 Mac 上安装完整 Xcode 和 XcodeGen。
 2. 使用将要签名的 Apple ID 登录 Xcode。
-3. 在 `project.yml` 中同时更新 iOS 和 tvOS 的版本号与构建号。
-4. 执行：
+3. 首次在这台 Mac 上开发时，查询 Apple Developer Team ID，然后生成只保存在本机的签名配置：
+
+```bash
+cd FamilyMediaClient
+python3 scripts/configure_local_signing.py YOUR_TEAM_ID
+```
+
+Team ID 可在 Xcode 的 Settings > Accounts 中选择 Apple ID 和对应 Team 后查看。
+
+`LocalSigning.xcconfig` 已被 Git 忽略，只保存 Team ID，不会上传到公开仓库。更换开发团队时重新执行该命令即可。
+
+4. 在 `project.yml` 中同时更新 iOS 和 tvOS 的版本号与构建号。
+5. 执行：
 
 ```bash
 cd FamilyMediaClient
@@ -33,7 +44,9 @@ swift test
 open FamilyMediaClient.xcodeproj
 ```
 
-5. 在 Xcode 中为两个 Target 选择同一个 Apple Developer Team，并确认 Signing & Capabilities 没有红色签名错误。仓库不会保存个人 Team ID。
+6. 确认 Signing & Capabilities 没有红色签名错误。两个 App 和测试 Target 会从 `LocalSigning.xcconfig` 继承同一个 Team；以后重新运行 XcodeGen 不需要再次手工选择。
+
+GitHub CI 不使用本机文件，而是通过 `CODE_SIGNING_ALLOWED=NO` 验证代码和通用构建。CI 产物不能直接安装到真机，真机安装仍需要本机证书、设备授权和有效的 Provisioning Profile。
 
 ## 3. 安装到真实 iPhone
 

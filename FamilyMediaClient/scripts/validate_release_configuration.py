@@ -4,11 +4,16 @@
 from pathlib import Path
 import plistlib
 import re
+import subprocess
 import sys
 
 
 ROOT = Path(__file__).resolve().parent.parent
+REPOSITORY_ROOT = ROOT.parent
 PROJECT_YAML = ROOT / "project.yml"
+SIGNING_CONFIG = ROOT / "Config/Signing.xcconfig"
+LOCAL_SIGNING_CONFIG = ROOT / "LocalSigning.xcconfig"
+LOCAL_SIGNING_EXAMPLE = ROOT / "LocalSigning.xcconfig.example"
 TARGETS = {
     "FamilyMediaiOS": ROOT / "iOS/FamilyMediaiOS/Resources/Info.plist",
     "FamilyMediaTV": ROOT / "TV/FamilyMediaTV/Resources/Info.plist",
@@ -101,8 +106,94 @@ def validate_privacy_manifest() -> None:
         fail("UserDefaults 必须声明 CA92.1 自有 App 配置用途")
 
 
+def validate_signing_configuration(project_text: str) -> None:
+    if not SIGNING_CONFIG.is_file():
+        fail("缺少通用签名配置：Config/Signing.xcconfig")
+    signing_text = SIGNING_CONFIG.read_text(encoding="utf-8")
+    if not re.search(r"^CODE_SIGN_STYLE\s*=\s*Automatic\s*$", signing_text, re.MULTILINE):
+        fail("通用签名配置必须使用 Automatic 签名")
+    if not re.search(
+        r'^#include\?\s+"\.\./LocalSigning\.xcconfig"\s*$',
+        signing_text,
+        re.MULTILINE,
+    ):
+        fail("通用签名配置必须可选加载 LocalSigning.xcconfig")
+
+    expected_config_files = re.search(
+        r"^configFiles:\n"
+        r"  Debug:\s*Config/Signing\.xcconfig\s*\n"
+        r"  Release:\s*Config/Signing\.xcconfig\s*$",
+        project_text,
+        re.MULTILINE,
+    )
+    if expected_config_files is None:
+        fail("project.yml 的 Debug 与 Release 必须共用 Config/Signing.xcconfig")
+    if "DEVELOPMENT_TEAM" in project_text:
+        fail("project.yml 不得保存个人 Apple Developer Team ID")
+    if "CODE_SIGN_STYLE" in project_text:
+        fail("CODE_SIGN_STYLE 应只由通用 Signing.xcconfig 管理")
+
+    if not LOCAL_SIGNING_EXAMPLE.is_file():
+        fail("缺少 LocalSigning.xcconfig.example")
+    example_text = LOCAL_SIGNING_EXAMPLE.read_text(encoding="utf-8")
+    if not re.search(
+        r"^DEVELOPMENT_TEAM\s*=\s*YOUR_TEAM_ID\s*$",
+        example_text,
+        re.MULTILINE,
+    ):
+        fail("本机签名示例必须使用 YOUR_TEAM_ID 占位符")
+
+    tracked_local_config = subprocess.run(
+        [
+            "git",
+            "ls-files",
+            "--error-unmatch",
+            "FamilyMediaClient/LocalSigning.xcconfig",
+        ],
+        cwd=REPOSITORY_ROOT,
+        capture_output=True,
+        check=False,
+    )
+    if tracked_local_config.returncode == 0:
+        fail("LocalSigning.xcconfig 不得被 Git 跟踪")
+
+    public_files = subprocess.run(
+        ["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard"],
+        cwd=REPOSITORY_ROOT,
+        capture_output=True,
+        check=True,
+    ).stdout.decode("utf-8").split("\0")
+    team_pattern = re.compile(
+        r"DEVELOPMENT_TEAM\s*[:=]\s*[\"']?[A-Z0-9]{10}[\"']?"
+    )
+    for relative_path in filter(None, public_files):
+        path = REPOSITORY_ROOT / relative_path
+        try:
+            text = path.read_text(encoding="utf-8")
+        except (OSError, UnicodeDecodeError):
+            continue
+        if team_pattern.search(text):
+            fail(f"跟踪文件包含个人 Apple Developer Team ID：{relative_path}")
+
+    if LOCAL_SIGNING_CONFIG.exists():
+        local_lines = [
+            line.strip()
+            for line in LOCAL_SIGNING_CONFIG.read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.lstrip().startswith("//")
+        ]
+        if len(local_lines) != 1 or not re.fullmatch(
+            r"DEVELOPMENT_TEAM\s*=\s*[A-Z0-9]{10}",
+            local_lines[0],
+        ):
+            fail("LocalSigning.xcconfig 只能包含一个有效的 DEVELOPMENT_TEAM")
+        print("✅ 已检测到被 Git 忽略的本机 Apple Developer Team 配置")
+    else:
+        print("ℹ️ 未配置本机 Team；CI 无签名构建不受影响")
+
+
 def main() -> None:
     project_text = PROJECT_YAML.read_text(encoding="utf-8")
+    validate_signing_configuration(project_text)
     validate_privacy_manifest()
     values: dict[str, dict[str, str]] = {}
     for target, plist_path in TARGETS.items():
@@ -145,7 +236,7 @@ def main() -> None:
         "✅ 发布配置正常："
         f"家映 {ios['MARKETING_VERSION']} ({ios['CURRENT_PROJECT_VERSION']})"
     )
-    print("✅ Apple Developer Team 由本机 Xcode 选择，仓库不保存个人 Team ID")
+    print("✅ Apple Developer Team 通过被忽略的 LocalSigning.xcconfig 隔离")
     print(f"✅ iOS Bundle ID：{ios['PRODUCT_BUNDLE_IDENTIFIER']}")
     print(f"✅ tvOS Bundle ID：{tv['PRODUCT_BUNDLE_IDENTIFIER']}")
 
@@ -153,5 +244,5 @@ def main() -> None:
 if __name__ == "__main__":
     try:
         main()
-    except (OSError, plistlib.InvalidFileException) as error:
+    except (OSError, plistlib.InvalidFileException, subprocess.CalledProcessError) as error:
         fail(f"无法读取发布配置：{error}")

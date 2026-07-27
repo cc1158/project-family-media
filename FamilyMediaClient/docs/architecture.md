@@ -395,9 +395,12 @@ All UI-test launch handling is guarded by `#if DEBUG`. Release builds ignore the
 This repository keeps app project configuration in `project.yml`. After installing Xcode and XcodeGen:
 
 ```bash
+python3 scripts/configure_local_signing.py YOUR_TEAM_ID
 xcodegen generate
 open FamilyMediaClient.xcodeproj
 ```
+
+`Config/Signing.xcconfig` is committed and shared by every Apple target. It optionally includes the ignored `LocalSigning.xcconfig`, so a developer configures their Team once without committing personal signing settings. CI does not create that local file and builds with code signing disabled.
 
 Core package tests can run without the generated Xcode project:
 

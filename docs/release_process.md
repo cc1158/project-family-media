@@ -6,7 +6,14 @@
 
 1. 工作区必须只包含本次基线修改，不得包含真实 NAS 配置、媒体文件或凭据。
 2. Apple 客户端版本应为 `1.0.0 (4)`。
-3. 运行自动验证：
+3. 首次在发布 Mac 上操作时生成被 Git 忽略的本机签名配置；后续只有更换 Team 时需要重做：
+
+```bash
+cd FamilyMediaClient
+python3 scripts/configure_local_signing.py YOUR_TEAM_ID
+```
+
+4. 运行自动验证：
 
 ```bash
 cd family-media-server
@@ -25,6 +32,8 @@ xcodebuild -project FamilyMediaClient.xcodeproj -scheme FamilyMediaTV \
 cd ..
 git diff --check
 ```
+
+自动验证使用 `CODE_SIGNING_ALLOWED=NO`，不会读取证书或生成可安装包。真机验收使用同一份源代码和本机 `LocalSigning.xcconfig`；不建立包含私人签名信息的发布分支。
 
 ## 2. 构建服务端交付物
 

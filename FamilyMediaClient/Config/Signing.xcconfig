@@ -1,0 +1,5 @@
+// Shared signing policy. Personal Apple Developer details belong only in the
+// ignored LocalSigning.xcconfig file at the FamilyMediaClient root.
+CODE_SIGN_STYLE = Automatic
+
+#include? "../LocalSigning.xcconfig"

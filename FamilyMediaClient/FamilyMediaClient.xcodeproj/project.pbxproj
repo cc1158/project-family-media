@@ -199,6 +199,7 @@
 		48E3C225920BBA90B01177DB /* AppMessage+TVStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppMessage+TVStyle.swift"; sourceTree = "<group>"; };
 		4C3ABE59AE1C3969D7F75D24 /* MediaViewerPanels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewerPanels.swift; sourceTree = "<group>"; };
 		4C4886B18B5933C3EC6C3115 /* MediaViewerContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewerContent.swift; sourceTree = "<group>"; };
+		4D00C55A18E5E58FE773606B /* Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
 		4D346151B5916C7677E1604D /* ImageMemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMemoryCache.swift; sourceTree = "<group>"; };
 		5044ADD9EC6757B0DBCF4A01 /* FamilyMediaAdaptiveLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMediaAdaptiveLayout.swift; sourceTree = "<group>"; };
 		50890BE48721B26146E1D908 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
@@ -357,6 +358,14 @@
 				8900EA8F8BA392B56CE192FE /* HomeView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		2A4D2FAE35472B6B235C58AD /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4D00C55A18E5E58FE773606B /* Signing.xcconfig */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		2DD8FA4A5FFB42511F8865AC /* FamilyMediaiOS */ = {
@@ -639,6 +648,7 @@
 		F994B4FF3D6DEA399603634A = {
 			isa = PBXGroup;
 			children = (
+				2A4D2FAE35472B6B235C58AD /* Config */,
 				830465991C2EC02CF19F0395 /* FamilyMediaAppleUI */,
 				C0C3171C1DF5509BCA0A2CCE /* FamilyMediaiOS */,
 				0785180A83CEA21367777B0E /* FamilyMediaiOSUITests */,
@@ -1005,7 +1015,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1026,7 +1035,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				INFOPLIST_FILE = TV/FamilyMediaTV/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1045,7 +1053,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1064,7 +1071,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1081,6 +1087,7 @@
 		};
 		4B392FE0E41B89A5900BD70E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D00C55A18E5E58FE773606B /* Signing.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1141,7 +1148,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				INFOPLIST_FILE = iOS/FamilyMediaiOS/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1158,6 +1164,7 @@
 		};
 		8DA9BD741DFD58DAD1C6FE12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D00C55A18E5E58FE773606B /* Signing.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1223,7 +1230,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1242,7 +1248,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1263,7 +1268,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				INFOPLIST_FILE = iOS/FamilyMediaiOS/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1284,7 +1288,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				INFOPLIST_FILE = TV/FamilyMediaTV/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1303,7 +1306,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,0 +1,5 @@
+// Copy this file to LocalSigning.xcconfig with:
+// python3 scripts/configure_local_signing.py YOUR_TEAM_ID
+//
+// Never add certificates, passwords, Apple IDs, or provisioning profiles here.
+DEVELOPMENT_TEAM = YOUR_TEAM_ID

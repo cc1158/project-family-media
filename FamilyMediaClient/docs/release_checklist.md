@@ -6,6 +6,7 @@
 
 ## 1. 版本与构建
 
+- 首次使用发布 Mac 时执行 `python3 scripts/configure_local_signing.py YOUR_TEAM_ID`；确认生成的 `LocalSigning.xcconfig` 未被 Git 跟踪。
 - 在 `project.yml` 中同时更新 iOS 和 tvOS 的 `MARKETING_VERSION` 与 `CURRENT_PROJECT_VERSION`。
 - 执行 `python3 scripts/validate_release_configuration.py`，确认版本、Bundle ID、Team、Info.plist 和横竖屏配置一致。
 - 执行 `xcodegen generate`，确认生成后的工程只包含预期差异。
